@@ -129,8 +129,27 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
+  max-width: 100%;
+  border: 2px solid darkslategray;
 }
 html,
 body {
   height: 100%;
+}
+.pageContainer .navBar {
+  display: flex;
+  justify-content: flex-end;
+  background-color: black;
+  padding: 1%;
+}
+.pageContainer .navBar .links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+.pageContainer .navBar .links a {
+  text-decoration-line: none;
+  font-family: 'Teko', sans-serif;
+  font-size: 2rem;
+  color: white;
 }

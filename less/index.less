@@ -50,13 +50,51 @@ table {
 
 /* Set every element's box-sizing to border-box */
 // VARIABLES //
-@main-color: green;
-@secondary-color: yellow;
+@title-font: 'Teko', sans-serif;
+@body-font: 'Rajdhani', sans-serif;
+@primary-color: skyblue;
+@secondary-color: white;
+@tertiary-color: black;
+//=========//
+// Mixins //
+.center(){
+	display:flex;
+	justify-content: center;
+}
+.left(){
+	display:flex;
+	justify-content: flex-start;
+}
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 100%;
+	border: 2px solid darkslategray;
 }
 
 html, body {
 	height: 100%;
 }
 
+.pageContainer{
+	.center(){
+
+	}
+	// ===== Nav ===== //
+	.navBar{
+		display: flex;
+		justify-content: flex-end;
+		background-color: @tertiary-color;
+		padding: 1%;
+		.links {
+			display: flex;
+			justify-content: space-evenly;
+			width: 50%;
+			a {
+				text-decoration-line: none;
+				font-family: @title-font;
+				font-size: 2rem;
+				color: @secondary-color;
+			}
+		}
+	}
+}// This the end of the pages container //
