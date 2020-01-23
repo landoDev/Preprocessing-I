@@ -130,11 +130,29 @@ table {
 * {
   box-sizing: border-box;
   max-width: 100%;
-  border: 2px solid darkslategray;
 }
 html,
 body {
   height: 100%;
+}
+h1 {
+  font-size: 6rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h1,
+h2 {
+  font-family: 'Teko', sans-serif;
+}
+p,
+li {
+  font-family: 'Rajdhani', sans-serif;
+}
+.pageContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .pageContainer .navBar {
   display: flex;
@@ -152,4 +170,54 @@ body {
   font-family: 'Teko', sans-serif;
   font-size: 2rem;
   color: white;
+}
+.pageContainer header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.pageContainer header .headerImg {
+  width: 40%;
+}
+.pageContainer header .headerImg img {
+  background-color: skyblue;
+  margin: 5% 0;
+  border: 5px solid black;
+  border-radius: 50%;
+}
+.pageContainer header .headerImg .titleText {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+}
+.pageContainer header .headerImg h1 {
+  font-size: 5rem;
+}
+.pageContainer header .headerImg p {
+  align-self: center;
+}
+.pageContainer .backGround {
+  display: flex;
+  justify-content: space-around;
+  margin: 2% 5%;
+}
+.pageContainer .backGround .whyHire {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  width: 48%;
+}
+.pageContainer .backGround .mySkills {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2%;
+  width: 45%;
+  background-color: skyblue;
+  border: 0.1rem solid black;
+}
+.pageContainer .backGround .mySkills ul {
+  align-self: center;
+  list-style-type: circle;
+  padding: 2%;
 }

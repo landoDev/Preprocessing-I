@@ -65,20 +65,33 @@ table {
 	display:flex;
 	justify-content: flex-start;
 }
+// General Styles //
 * {
 	box-sizing: border-box;
 	max-width: 100%;
-	border: 2px solid darkslategray;
 }
 
 html, body {
 	height: 100%;
 }
+h1{
+	font-size: 6rem;
+}
+h2{
+	font-size: 3rem;
+}
+h1, h2 {
+	font-family: @title-font;
+}
+
+p , li {
+	font-family: @body-font;
+}
 
 .pageContainer{
-	.center(){
-
-	}
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 	// ===== Nav ===== //
 	.navBar{
 		display: flex;
@@ -97,4 +110,50 @@ html, body {
 			}
 		}
 	}
-}// This the end of the pages container //
+	// ====== Header ====== //
+	header{
+		display: flex;
+		justify-content: space-evenly;
+		.headerImg{
+			width: 40%;
+			img{
+				background-color: @primary-color;
+				margin: 5% 0;
+				border: 5px solid @tertiary-color;
+				border-radius: 50%;
+			}
+		.titleText {
+			display: flex;
+			align-content: center;
+			#position 
+		}
+		
+	}// header closes here
+	// ======= Background Section ====== //
+	.backGround {
+		display: flex;
+		justify-content: space-around;
+		margin: 2% 5%;
+		.whyHire{
+			display:flex;
+			flex-direction: column;
+			padding: 2%;
+			width: 48%;
+		}
+		.mySkills {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			padding: 2%;
+			width: 45%;
+			background-color: @primary-color;
+			border: 0.1rem solid @tertiary-color;
+		
+			.skills {
+				align-self: center;
+				list-style-type: circle;
+				padding: 2%;
+			}
+		}
+		}// End background section
+	}
