@@ -59,11 +59,13 @@ table {
 // Mixins //
 .center(){
 	display:flex;
-	justify-content: center;
+	justify-content: space-evenly;
+	align-content: center;
 }
-.left(){
+.stack(){
 	display:flex;
-	justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
 }
 // General Styles //
 * {
@@ -74,34 +76,31 @@ table {
 html, body {
 	height: 100%;
 }
-h1{
+h1 {
+	font-family: @title-font;
 	font-size: 6rem;
 }
 h2{
+	font-family: @title-font;
 	font-size: 3rem;
 }
-h1, h2 {
-	font-family: @title-font;
-}
-
-p , li {
+p {
 	font-family: @body-font;
 }
 
 .pageContainer{
 	display: flex;
-	justify-content: center;
 	flex-direction: column;
 	// ===== Nav ===== //
 	.navBar{
 		display: flex;
 		justify-content: flex-end;
 		background-color: @tertiary-color;
-		padding: 1%;
 		.links {
 			display: flex;
 			justify-content: space-evenly;
 			width: 50%;
+			padding: 1%;
 			a {
 				text-decoration-line: none;
 				font-family: @title-font;
@@ -113,7 +112,11 @@ p , li {
 	// ====== Header ====== //
 	header{
 		display: flex;
+		align-items: center;
 		justify-content: space-evenly;
+		margin-bottom: 2%;
+		border-bottom: 2px dotted @tertiary-color;
+
 		.headerImg{
 			width: 40%;
 			img{
@@ -122,38 +125,74 @@ p , li {
 				border: 5px solid @tertiary-color;
 				border-radius: 50%;
 			}
-		.titleText {
-			display: flex;
-			align-content: center;
-			#position 
 		}
-		
-	}// header closes here
+		.titleText {
+			.stack();
+			p {
+				font-family: @body-font;
+				font-size: 1.5rem;
+			}
+			button {
+				width: 30%;
+				margin-top: 5%;
+				padding: 1%;
+				border: .2rem solid @tertiary-color;
+				border-radius: 5%;
+				background: @primary-color;
+				a {
+					text-decoration-line: none;
+					font-family: @body-font;
+					color: @tertiary-color;
+				}
+			}
+		}
+	} // END HEADER
 	// ======= Background Section ====== //
 	.backGround {
 		display: flex;
 		justify-content: space-around;
-		margin: 2% 5%;
+		margin: 2%;
 		.whyHire{
 			display:flex;
 			flex-direction: column;
 			padding: 2%;
 			width: 48%;
+			p {
+				font-size: 2rem;
+			}
 		}
 		.mySkills {
 			display: flex;
 			flex-direction: column;
-			justify-content: flex-start;
+			align-items: center;
 			padding: 2%;
-			width: 45%;
+			width: 48%;
+			max-height: 25vh;
 			background-color: @primary-color;
 			border: 0.1rem solid @tertiary-color;
+			border-radius: 50%;
 		
 			.skills {
-				align-self: center;
 				list-style-type: circle;
 				padding: 2%;
+				font-family: @body-font;
+				font-size: 1.5rem;
 			}
 		}
-		}// End background section
+	}// BG ENDS
+	// ======= EDUCATION SECTION ======= //
+	.myEducation {
+		.center();
+		border: .3rem solid @tertiary-color;
+		h2{
+			align-self: center;
+			width: 10%;
+			
+		}
+		#unc {
+			display: flex;
+			width: 48%
+		}
+		
 	}
+}//end of page container

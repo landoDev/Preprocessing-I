@@ -136,34 +136,30 @@ body {
   height: 100%;
 }
 h1 {
+  font-family: 'Teko', sans-serif;
   font-size: 6rem;
 }
 h2 {
+  font-family: 'Teko', sans-serif;
   font-size: 3rem;
 }
-h1,
-h2 {
-  font-family: 'Teko', sans-serif;
-}
-p,
-li {
+p {
   font-family: 'Rajdhani', sans-serif;
 }
 .pageContainer {
   display: flex;
-  justify-content: center;
   flex-direction: column;
 }
 .pageContainer .navBar {
   display: flex;
   justify-content: flex-end;
   background-color: black;
-  padding: 1%;
 }
 .pageContainer .navBar .links {
   display: flex;
   justify-content: space-evenly;
   width: 50%;
+  padding: 1%;
 }
 .pageContainer .navBar .links a {
   text-decoration-line: none;
@@ -173,8 +169,10 @@ li {
 }
 .pageContainer header {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 2%;
+  border-bottom: 2px dotted black;
 }
 .pageContainer header .headerImg {
   width: 40%;
@@ -185,21 +183,32 @@ li {
   border: 5px solid black;
   border-radius: 50%;
 }
-.pageContainer header .headerImg .titleText {
+.pageContainer header .titleText {
   display: flex;
-  justify-content: center;
-  width: 40%;
+  flex-direction: column;
+  align-items: center;
 }
-.pageContainer header .headerImg h1 {
-  font-size: 5rem;
+.pageContainer header .titleText p {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.5rem;
 }
-.pageContainer header .headerImg p {
-  align-self: center;
+.pageContainer header .titleText button {
+  width: 30%;
+  margin-top: 5%;
+  padding: 1%;
+  border: 0.2rem solid black;
+  border-radius: 5%;
+  background: skyblue;
+}
+.pageContainer header .titleText button a {
+  text-decoration-line: none;
+  font-family: 'Rajdhani', sans-serif;
+  color: black;
 }
 .pageContainer .backGround {
   display: flex;
   justify-content: space-around;
-  margin: 2% 5%;
+  margin: 2%;
 }
 .pageContainer .backGround .whyHire {
   display: flex;
@@ -207,17 +216,37 @@ li {
   padding: 2%;
   width: 48%;
 }
+.pageContainer .backGround .whyHire p {
+  font-size: 2rem;
+}
 .pageContainer .backGround .mySkills {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: center;
   padding: 2%;
-  width: 45%;
+  width: 48%;
+  max-height: 25vh;
   background-color: skyblue;
   border: 0.1rem solid black;
+  border-radius: 50%;
 }
-.pageContainer .backGround .mySkills ul {
-  align-self: center;
+.pageContainer .backGround .mySkills .skills {
   list-style-type: circle;
   padding: 2%;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.5rem;
+}
+.pageContainer .myEducation {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  border: 0.3rem solid black;
+}
+.pageContainer .myEducation h2 {
+  align-self: center;
+  width: 10%;
+}
+.pageContainer .myEducation #unc {
+  display: flex;
+  width: 48%;
 }
