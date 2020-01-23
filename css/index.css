@@ -156,11 +156,29 @@ p {
   justify-content: flex-end;
   background-color: black;
 }
+@media screen and (max-width: 500px) {
+  .pageContainer .navBar {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 2%;
+  }
+}
 .pageContainer .navBar .links {
   display: flex;
   justify-content: space-evenly;
   width: 50%;
   padding: 1%;
+}
+@media screen and (max-width: 500px) {
+  .pageContainer .navBar .links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .pageContainer .navBar .links a {
+    margin: 0% 6%;
+  }
 }
 .pageContainer .navBar .links a {
   text-decoration-line: none;
@@ -175,8 +193,20 @@ p {
   margin-bottom: 2%;
   border-bottom: 2px dotted black;
 }
+@media screen and (max-width: 500px) {
+  .pageContainer header {
+    display: flex;
+    flex-direction: column;
+    border-bottom: hidden;
+  }
+}
 .pageContainer header .headerImg {
   width: 40%;
+}
+@media screen and (max-width: 500px) {
+  .pageContainer header .headerImg {
+    margin: 5%;
+  }
 }
 .pageContainer header .headerImg img {
   background-color: skyblue;
@@ -188,6 +218,11 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (max-width: 500px) {
+  .pageContainer header .titleText h1 {
+    align-self: center;
+  }
 }
 .pageContainer header .titleText p {
   font-family: 'Rajdhani', sans-serif;
@@ -211,6 +246,12 @@ p {
   justify-content: space-around;
   margin: 2%;
 }
+@media screen and (max-width: 500px) {
+  .pageContainer .backGround {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .pageContainer .backGround .whyHire {
   display: flex;
   flex-direction: column;
@@ -219,6 +260,12 @@ p {
 }
 .pageContainer .backGround .whyHire p {
   font-size: 2rem;
+}
+@media screen and (max-width: 500px) {
+  .pageContainer .backGround .whyHire {
+    display: flex;
+    width: 100%;
+  }
 }
 .pageContainer .backGround .mySkills {
   display: flex;
@@ -230,6 +277,13 @@ p {
   background-color: skyblue;
   border: 0.1rem solid black;
   border-radius: 50%;
+}
+@media screen and (max-width: 500px) {
+  .pageContainer .backGround .mySkills {
+    display: flex;
+    width: 100%;
+    border-radius: 0%;
+  }
 }
 .pageContainer .backGround .mySkills .skills {
   list-style-type: circle;
@@ -288,6 +342,38 @@ p {
 .pageContainer .myEducation .schools #lambda p {
   align-self: center;
   width: 50%;
+}
+@media screen and (max-width: 500px) {
+  .pageContainer .myEducation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .pageContainer .myEducation h2 {
+    align-self: flex-end;
+    width: 100%;
+    margin: 0;
+  }
+  .pageContainer .myEducation .schools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .pageContainer .myEducation .schools #unc {
+    display: flex;
+    flex-direction: column;
+    flex-flow: nowrap;
+    border-top: 2px dashed black;
+    border-left: hidden;
+  }
+  .pageContainer .myEducation .schools #lambda {
+    display: flex;
+    flex-direction: column;
+    flex-flow: nowrap;
+    border-left: hidden;
+  }
 }
 .pageContainer footer {
   margin-top: 5%;
