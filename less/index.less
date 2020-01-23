@@ -49,11 +49,268 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+// VARIABLES //
+@title-font: 'Teko', sans-serif;
+@body-font: 'Rajdhani', sans-serif;
+@primary-color: skyblue;
+@secondary-color: white;
+@tertiary-color: black;
+//=========//
+// Mixins //
+.center(){
+	display:flex;
+	justify-content: space-evenly;
+	align-content: center;
+}
+.stack(){
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+.schoolBox(){
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2%;
+	border-left: .3rem solid @tertiary-color;
+	h2 {
+		align-self: flex-start;
+		width: 80%;
+	}
+	p{
+		align-self: center;
+		width: 50%;
+	}
+}
+
+// General Styles //
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 100%;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+}
+h1 , h3 {
+	font-family: @title-font;
+	font-size: 6rem;
+}
+h2{
+	font-family: @title-font;
+	font-size: 3rem;
+}
+p {
+	font-family: @body-font;
 }
 
+.pageContainer{
+	display: flex;
+	flex-direction: column;
+	// ===== Nav ===== //
+	.navBar{
+		@media screen and (max-width: 500px) {
+			.center();
+			padding: 2%;
+		}
+		display: flex;
+		justify-content: flex-end;
+		background-color: @tertiary-color;
+		.links {
+			@media screen and (max-width: 500px) {
+				display: flex;
+				justify-content: space-evenly;
+				align-items: center;
+				a{
+					margin: 0% 6%;
+				}
+
+			}
+			display: flex;
+			justify-content: space-evenly;
+			width: 50%;
+			padding: 1%;
+			a {
+				text-decoration-line: none;
+				font-family: @title-font;
+				font-size: 2rem;
+				color: @secondary-color;
+			}
+		}
+	}
+	// ====== Header ====== //
+	header{
+		@media screen and (max-width:500px) {
+			display: flex;
+			flex-direction: column;
+			border-bottom: hidden;
+		}
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		margin-bottom: 2%;
+		border-bottom: 2px dotted @tertiary-color;
+
+		.headerImg{
+			@media screen and (max-width: 500px) {
+				margin: 5%;
+			}
+			width: 40%;
+			img{
+				background-color: @primary-color;
+				margin: 5% 0;
+				border: 5px solid @tertiary-color;
+				border-radius: 50%;
+			}
+		}
+		.titleText {
+			@media screen and (max-width: 500px){
+				h1 {
+					align-self: center;
+				}
+			}
+			.stack();
+			p {
+				font-family: @body-font;
+				font-size: 1.5rem;
+			}
+			button {
+				width: 30%;
+				margin-top: 5%;
+				padding: 1%;
+				border: .2rem solid @tertiary-color;
+				border-radius: 5%;
+				background: @primary-color;
+				a {
+					text-decoration-line: none;
+					font-family: @body-font;
+					color: @tertiary-color;
+				}
+			}
+		}
+	} // END HEADER
+	// ======= Background Section ====== //
+	.backGround {
+		@media screen and (max-width:500px) {
+			display:flex;
+			flex-direction: column;
+		}
+		display: flex;
+		justify-content: space-around;
+		margin: 2%;
+		.whyHire{
+			display:flex;
+			flex-direction: column;
+			padding: 2%;
+			width: 48%;
+			p {
+				font-size: 2rem;
+			}
+			@media screen and (max-width: 500px) {
+				display: flex;
+				width: 100%;
+			}
+		}
+		.mySkills {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 2%;
+			width: 48%;
+			max-height: 25vh;
+			background-color: @primary-color;
+			border: 0.1rem solid @tertiary-color;
+			border-radius: 50%;
+			@media screen and (max-width: 500px) {
+				display: flex;
+				width: 100%;
+				border-radius: 0%;
+			}
+		
+			.skills {
+				list-style-type: circle;
+				padding: 2%;
+				font-family: @body-font;
+				font-size: 1.5rem;
+			}
+		}
+	}// BG ENDS
+	// ======= EDUCATION SECTION ======= //
+	.myEducation {
+		display:flex;
+		justify-content: space-between;
+		margin: 0% 2%;
+		border: .3rem solid @tertiary-color;
+		background-color: @primary-color;
+		h2{
+			align-self: center;
+			margin-left: 5%;
+			width: 20%;
+			
+		}
+		.schools{
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			flex-wrap: nowrap;
+			width: 80%;
+			#unc {
+				.schoolBox();
+				background-color: @secondary-color;
+				border-bottom: .1rem dashed @tertiary-color;
+			}
+			#lambda{
+				.schoolBox();
+				background-color: @secondary-color;
+			}
+		
+		}
+		@media screen and (max-width: 500px) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			h2 {
+				align-self: flex-end;
+				width: 100%;
+				margin: 0;
+			}
+			.schools {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				#unc {
+					display: flex;
+					flex-direction: column;
+					flex-flow: nowrap;
+					border-top: 2px dashed @tertiary-color;
+					border-left: hidden;
+				}
+				#lambda{
+					display: flex;
+					flex-direction: column;
+					flex-flow: nowrap;
+					border-left: hidden;
+				}
+			}
+		}
+		
+	}// END EDUCATION
+	// ===== FOOTER ===== //
+	footer {
+		margin-top: 5%;
+		border-top: 2px dotted @tertiary-color;
+		#contact {
+			display: flex;
+			flex-direction: column;
+			padding: 5%;
+			h3 {
+				font-size: 2rem;
+			}
+			p{
+				padding: .5% 0;
+			}
+		}
+	}
+}//end of page container
